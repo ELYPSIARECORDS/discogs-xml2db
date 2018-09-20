@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ce4e3e4-7093-4d5a-9168-36ab237746cb}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>discogsparser.py</StartupFile>
+    <SearchPath>..\discogs-xml2db</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <CommandLineArguments>
+    </CommandLineArguments>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="requirements\base.txt" />
+    <Content Include="requirements\requirements-below2.7.txt" />
+    <Content Include="requirements\requirements-couch.txt" />
+    <Content Include="requirements\requirements-mongodb.txt" />
+    <Content Include="requirements\requirements-postgresql.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="discogsparser.py" />
+    <Compile Include="exporters\abstractexporter.py" />
+    <Compile Include="exporters\couchdbexporter.py" />
+    <Compile Include="exporters\jsonexporter.py" />
+    <Compile Include="exporters\mongodbexporter.py" />
+    <Compile Include="exporters\postgresexporter.py" />
+    <Compile Include="exporters\__init__.py" />
+    <Compile Include="fix-xml.py" />
+    <Compile Include="model.py" />
+    <Compile Include="parsers\discogsartistparser.py" />
+    <Compile Include="parsers\discogslabelparser.py" />
+    <Compile Include="parsers\discogsmasterparser.py" />
+    <Compile Include="parsers\discogsreleaseparser.py" />
+    <Compile Include="parsers\__init__.py" />
+    <Compile Include="tests\test_parser.py" />
+    <Compile Include="tests\__init__.py" />
+    <Compile Include="tools\make_artist_name_id_pair.py" />
+    <Compile Include="tools\make_md5.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="exporters" />
+    <Folder Include="parsers" />
+    <Folder Include="requirements" />
+    <Folder Include="tests" />
+    <Folder Include="tools" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

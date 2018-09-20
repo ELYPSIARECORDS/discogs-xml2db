@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "discogs-xml2db", "discogs-xml2db.pyproj", "{3CE4E3E4-7093-4D5A-9168-36AB237746CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CE4E3E4-7093-4D5A-9168-36AB237746CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE4E3E4-7093-4D5A-9168-36AB237746CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {949FDC4A-5D1F-4AF6-BFDD-4AA48496BAFB}
+	EndGlobalSection
+EndGlobal
